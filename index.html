@@ -39,6 +39,13 @@
       align-items: center;
       justify-content: center;
     }
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+    }
     .custom-button {
       background: linear-gradient(27deg, #3125e3ba 0%, #dd23beb8 100%);
       border: none;
@@ -48,7 +55,7 @@
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
-      margin: 4px 2px 128px 4px;
+      margin: 0;
       cursor: pointer;
       border-radius: 12px;
       font-weight: 600;
@@ -96,6 +103,11 @@
       border-radius: 50%;
     }
     @media (min-width: 768px) {
+      .buttons-container {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 128px;
+      }
       .title {
         font-size: 4rem;
         gap: 20px;
@@ -103,6 +115,7 @@
       .custom-button {
         font-size: 18px;
         width: fit-content;
+        margin: 0;
       }
       .logo {
         width: 80px;
@@ -116,8 +129,13 @@
     <img src="./logoRound.png" alt="" class="logo">
     Soonish on Sonic
   </div>
-  <a href="https://fantom.paintswap.finance" class="custom-button animate__animated animate__fadeIn">
-    Visit Fantom PaintSwap
-  </a>
+  <div class="buttons-container">
+    <a href="https://fantom.paintswap.finance" class="custom-button animate__animated animate__fadeIn">
+      Visit Fantom PaintSwap
+    </a>
+    <a href="https://bridge.paintswap.io" class="custom-button animate__animated animate__fadeIn">
+      $BRUSH Bridge
+    </a>
+  </div>
 </body>
 </html>
